@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>SmartPaws - Additional Services</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="services-header">
+        <div>
+            <h1>Additional Services</h1>
+            <p>Customize your pet's grooming package with extra care.</p>
+        </div>
+
+        <div class="selected-cut-box">
+            <span>SELECTED HAIRCUT</span>
+            <h3 id="selected-cut-name">GGFRICKINEZ</h3>
+            <p id="selected-cut-price">₱0</p>
+        </div>
+    </header>
+
+    <main class="additional-container">
+
+        <h2>Choose Additional Services</h2>
+        <p>Select as many services as you need (Optional).</p>
+
+        <div id="service-list" class="service-list">
+
+            <!-- De-shedding Treatment -->
+            <label class="service-card">
+                <input type="checkbox" class="service-checkbox" value="150" data-name="De-shedding Treatment">
+                <div class="service-info">
+                    <strong>De-shedding Treatment</strong>
+                    <span class="service-price">+₱150</span>
+                    <p>Gentle brushing to remove loose fur and help reduce shedding.</p>
+                </div>
+            </label>
+
+            <!-- De-matting & Detangling -->
+            <label class="service-card">
+                <input type="checkbox" class="service-checkbox" value="100" data-name="De-matting & Detangling">
+                <div class="service-info">
+                    <strong>De-matting &amp; Detangling</strong>
+                    <span class="service-price">+₱100</span>
+                    <p>Carefully removes minor tangles and mats to keep the coat manageable.</p>
+                </div>
+            </label>
+
+            <!-- Gentle Bath Treatment -->
+            <label class="service-card">
+                <input type="checkbox" class="service-checkbox" value="120" data-name="Gentle Bath Treatment">
+                <div class="service-info">
+                    <strong>Gentle Bath Treatment</strong>
+                    <span class="service-price">+₱120</span>
+                    <p>A gentle bath using shampoo formulated for the pet's species and coat type.</p>
+                </div>
+            </label>
+
+            <!-- Coat Conditioning -->
+            <label class="service-card">
+                <input type="checkbox" class="service-checkbox" value="130" data-name="Coat Conditioning">
+                <div class="service-info">
+                    <strong>Coat Conditioning</strong>
+                    <span class="service-price">+₱130</span>
+                    <p>Helps keep the coat soft, smooth, and easier to maintain.</p>
+                </div>
+            </label>
+
+            <!-- Sensitive Skin Bath -->
+            <label class="service-card">
+                <input type="checkbox" class="service-checkbox" value="150" data-name="Sensitive Skin Bath">
+                <div class="service-info">
+                    <strong>Sensitive Skin Bath</strong>
+                    <span class="service-price">+₱150</span>
+                    <p>A gentle, species-appropriate shampoo treatment for pets with sensitive skin.</p>
+                </div>
+            </label>
+
+            <!-- Flea Treatment -->
+            <label class="service-card">
+                <input type="checkbox" class="service-checkbox" value="200" data-name="Flea Treatment">
+                <div class="service-info">
+                    <strong>Flea Treatment</strong>
+                    <span class="service-price">+₱200</span>
+                    <p>Species-appropriate flea care selected for the pet's needs.</p>
+                </div>
+            </label>
+
+            <!-- Paw Pad Trimming -->
+            <label class="service-card">
+                <input type="checkbox" class="service-checkbox" value="80" data-name="Paw Pad Trimming">
+                <div class="service-info">
+                    <strong>Paw Pad Trimming</strong>
+                    <span class="service-price">+₱80</span>
+                    <p>Carefully trims excess fur around the paw pads when needed.</p>
+                </div>
+            </label>
+
+            <!-- Sanitary Trimming -->
+            <label class="service-card">
+                <input type="checkbox" class="service-checkbox" value="100" data-name="Sanitary Trimming">
+                <div class="service-info">
+                    <strong>Sanitary Trimming</strong>
+                    <span class="service-price">+₱100</span>
+                    <p>Carefully trims excess fur around the sanitary area when appropriate.</p>
+                </div>
+            </label>
+
+            <!-- Nail Trimming -->
+            <label class="service-card">
+                <input type="checkbox" class="service-checkbox" value="50" data-name="Nail Trimming">
+                <div class="service-info">
+                    <strong>Nail Trimming</strong>
+                    <span class="service-price">+₱50</span>
+                    <p>Carefully trims nails to a comfortable length.</p>
+                </div>
+            </label>
+
+            <!-- Nail Grinding & Smoothing -->
+            <label class="service-card">
+                <input type="checkbox" class="service-checkbox" value="80" data-name="Nail Grinding & Smoothing">
+                <div class="service-info">
+                    <strong>Nail Grinding &amp; Smoothing</strong>
+                    <span class="service-price">+₱80</span>
+                    <p>Gently smooths sharp nail edges using an appropriate grooming tool.</p>
+                </div>
+            </label>
+
+            <!-- Ear Cleaning -->
+            <label class="service-card">
+                <input type="checkbox" class="service-checkbox" value="80" data-name="Ear Cleaning">
+                <div class="service-info">
+                    <strong>Ear Cleaning</strong>
+                    <span class="service-price">+₱80</span>
+                    <p>Gently cleans visible dirt from the outer ears using suitable products.</p>
+                </div>
+            </label>
+
+            <!-- Eye Cleaning -->
+            <label class="service-card">
+                <input type="checkbox" class="service-checkbox" value="50" data-name="Eye Cleaning">
+                <div class="service-info">
+                    <strong>Eye Cleaning</strong>
+                    <span class="service-price">+₱50</span>
+                    <p>Gently cleans the area around the eyes with a pet-safe product.</p>
+                </div>
+            </label>
+
+            <!-- Tear Stain Cleaning -->
+            <label class="service-card">
+                <input type="checkbox" class="service-checkbox" value="80" data-name="Tear Stain Cleaning">
+                <div class="service-info">
+                    <strong>Tear Stain Cleaning</strong>
+                    <span class="service-price">+₱80</span>
+                    <p>Gently cleans visible tear stains around the eyes without irritating them.</p>
+                </div>
+            </label>
+
+            <!-- Paw Pad Moisturizing -->
+            <label class="service-card">
+                <input type="checkbox" class="service-checkbox" value="30" data-name="Paw Pad Moisturizing">
+                <div class="service-info">
+                    <strong>Paw Pad Moisturizing</strong>
+                    <span class="service-price">+₱30</span>
+                    <p>Applies a pet-safe moisturizer to help maintain paw-pad condition.</p>
+                </div>
+            </label>
+
+            <!-- Gentle Dental Care -->
+            <label class="service-card">
+                <input type="checkbox" class="service-checkbox" value="120" data-name="Gentle Dental Care">
+                <div class="service-info">
+                    <strong>Gentle Dental Care</strong>
+                    <span class="service-price">+₱120</span>
+                    <p>Provides gentle oral care using toothpaste and products formulated for the pet's species.</p>
+                </div>
+            </label>
+
+            <!-- Deodorizing Treatment -->
+            <label class="service-card">
+                <input type="checkbox" class="service-checkbox" value="80" data-name="Deodorizing Treatment">
+                <div class="service-info">
+                    <strong>Deodorizing Treatment</strong>
+                    <span class="service-price">+₱80</span>
+                    <p>Helps reduce unwanted coat odors using a species-appropriate product.</p>
+                </div>
+            </label>
+
+            <!-- Quick Brush & Comb -->
+            <label class="service-card">
+                <input type="checkbox" class="service-checkbox" value="70" data-name="Quick Brush & Comb">
+                <div class="service-info">
+                    <strong>Quick Brush &amp; Comb</strong>
+                    <span class="service-price">+₱70</span>
+                    <p>Removes loose surface fur and helps keep the coat neat between grooming sessions.</p>
+                </div>
+            </label>
+
+            <!-- Blow-Dry & Coat Finishing -->
+            <label class="service-card">
+                <input type="checkbox" class="service-checkbox" value="100" data-name="Blow-Dry & Coat Finishing">
+                <div class="service-info">
+                    <strong>Blow-Dry &amp; Coat Finishing</strong>
+                    <span class="service-price">+₱100</span>
+                    <p>Gently dries and finishes the coat using a suitable, pet-safe drying method.</p>
+                </div>
+            </label>
+
+            <!-- Skin & Coat Check -->
+            <label class="service-card">
+                <input type="checkbox" class="service-checkbox" value="50" data-name="Skin & Coat Check">
+                <div class="service-info">
+                    <strong>Skin &amp; Coat Check</strong>
+                    <span class="service-price">+₱50</span>
+                    <p>A basic visual check for visible tangles, skin irritation, or coat concerns.</p>
+                </div>
+            </label>
+
+            <!-- Pet-Safe Cologne -->
+            <label class="service-card">
+                <input type="checkbox" class="service-checkbox" value="50" data-name="Pet-Safe Cologne">
+                <div class="service-info">
+                    <strong>Pet-Safe Cologne</strong>
+                    <span class="service-price">+₱50</span>
+                    <p>Optional application of a fragrance specifically formulated for the pet's species.</p>
+                </div>
+            </label>
+
+        </div>
+
+        <!-- Running Total Section -->
+        <div class="running-total">
+            <div class="subtotal-row">
+                <span>Additional Services Subtotal</span>
+                <strong id="service-subtotal">₱0</strong>
+            </div>
+
+            <div class="total-row">
+                <span>Total Price (Haircut + Add-ons)</span>
+                <h2 id="total-price">₱0</h2>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="booking-buttons">
+
+            <!-- Return to the correct breed grooming page -->
+            <a href="#"
+               class="booking-btn secondary"
+               onclick="const cut = JSON.parse(localStorage.getItem('selectedCut') || '{}'); window.location.href = cut.backLink || 'aspin.html'; return false;">
+                Back to Haircuts
+            </a>
+
+            <a href="checkout.html" class="booking-btn">
+                Continue to Payment
+            </a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SmartPaws. All rights reserved.</p>
+    </footer>
+
+    <script src="pricing.js"></script>
+
+</body>
+</html>

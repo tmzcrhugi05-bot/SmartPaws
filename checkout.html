@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartPaws - Checkout</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="checkout-header">
+        <h1>Checkout</h1>
+        <p>Review your booking details before confirming.</p>
+    </header>
+
+    <main class="checkout-container">
+
+        <section class="checkout-section">
+            <h2>Booking Summary</h2>
+            <p class="section-description">
+                Review your selected grooming services and prices.
+            </p>
+
+            <div class="booking-info">
+                <div class="info-row">
+                    <span>Pet Breed</span>
+                    <strong id="petBreed">-</strong>
+                </div>
+
+                <div class="info-row">
+                    <span>Selected Haircut</span>
+                    <strong id="haircutName">-</strong>
+                </div>
+
+                <div class="info-row">
+                    <span>Haircut Price</span>
+                    <strong id="haircutPrice">₱0.00</strong>
+                </div>
+            </div>
+
+            <h3 class="subheading">Additional Services</h3>
+            <div id="additionalServices" class="service-list"></div>
+
+            <div class="info-row subtotal-row">
+                <span>Additional Services Subtotal</span>
+                <strong id="addOnsTotal">₱0.00</strong>
+            </div>
+
+            <div class="grand-total">
+                <span>Total Amount</span>
+                <strong id="grandTotal">₱0.00</strong>
+            </div>
+        </section>
+
+        <form id="checkoutForm">
+
+            <section class="checkout-section">
+                <h2>Customer Information</h2>
+
+                <div class="form-group">
+                    <label for="customerName">Full Name: </label>
+                    <input
+                        type="text"
+                        id="customerName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contactNumber">Contact Number:</label>
+                        <input
+                            type="tel"
+                            id="contactNumber"
+                            placeholder="Enter contact number"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter email address"
+                        >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="petName">Pet Name: </label>
+                    <input
+                        type="text"
+                        id="petName"
+                        placeholder="Enter your pet's name"
+                        required
+                    >
+                </div>
+            </section>
+
+            <section class="checkout-section">
+                <h2>Special Instructions</h2>
+
+                <div class="form-group">
+                    <label for="notes">Notes (Optional)</label>
+                    <textarea
+                        id="notes"
+                        rows="3"
+                        placeholder="Enter any special instructions"
+                    ></textarea>
+                </div>
+            </section>
+
+            <section class="checkout-section">
+                <h2>Payment Method</h2>
+
+                <label class="payment-option">
+                    <input
+                        type="radio"
+                        name="paymentMethod"
+                        value="GCash"
+                        required
+                    >
+                    <span>GCash</span>
+                </label>
+
+                <label class="payment-option">
+                    <input
+                        type="radio"
+                        name="paymentMethod"
+                        value="Cash on Counter"
+                    >
+                    <span>Cash on Counter</span>
+                </label>
+
+                <p id="paymentMessage" class="payment-message">
+                    Select your preferred payment method.
+                </p>
+
+                <!-- GCASH QR CODE: HIDDEN UNTIL GCASH IS SELECTED -->
+                <div id="gcashQRSection" class="gcash-qr-section" hidden>
+                    <h3>Pay with GCash</h3>
+
+                    <p>
+                        Scan the QR code below using your GCash app.
+                    </p>
+
+                    <img
+                        id="gcashQRImage"
+                        src="gcash-qr.png"
+                        alt="SmartPaws GCash QR Code"
+                        class="gcash-qr-image"
+                    >
+
+                    <p class="gcash-instructions">
+                        1. Open your GCash app and scan the QR code.<br>
+                        2. Check the recipient's name and payment amount.<br>
+                        3. Complete your payment in GCash.<br>
+                        4. Show your payment confirmation to SmartPaws staff.
+                    </p>
+
+                    <p class="gcash-warning">
+                        Please verify the recipient before sending money.
+                        Payment must be verified manually by the salon.
+                    </p>
+                </div>
+                <!-- END GCASH QR CODE -->
+
+            </section>
+
+            <div class="checkout-buttons">
+                <a href="additional%20services.html" class="btn btn-back">
+                    Back to Additional Services
+                </a>
+
+                <button type="submit" class="btn btn-confirm">
+                    Confirm Booking
+                </button>
+            </div>
+
+        </form>
+
+        <section id="receipt" class="checkout-section receipt" hidden>
+            <div class="receipt-heading">
+                <h2>SmartPaws</h2>
+                <p>Pet Grooming Service</p>
+                <h3>Booking Receipt</h3>
+            </div>
+
+            <div id="receiptDetails"></div>
+
+            <h3 class="subheading">Services</h3>
+            <div id="receiptServices" class="service-list"></div>
+
+            <div class="grand-total">
+                <span>Total Amount</span>
+                <strong id="receiptTotal">₱0.00</strong>
+            </div>
+
+            <p id="receiptStatus" class="payment-message">
+                Booking confirmed.
+            </p>
+
+            <div class="receipt-buttons">
+                <button
+                    type="button"
+                    class="btn btn-confirm"
+                    id="downloadReceipt"
+                >
+                    Download Receipt
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-back"
+                    onclick="window.location.href='index.html'"
+                >
+                    Back to Home
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SmartPaws - Pet Grooming Service</p>
+    </footer>
+
+    <script src="pricing.js"></script>
+
+</body>
+</html>
